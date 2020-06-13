@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  RecentViewController.swift
 //  Contacts
 //
 //  Created by Алексей Пархоменко on 13.06.2020.
@@ -8,13 +8,13 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class RecentViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
+        view.backgroundColor = .red
     }
 
 
 }
-
