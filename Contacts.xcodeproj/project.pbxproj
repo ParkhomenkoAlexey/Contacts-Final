@@ -13,6 +13,8 @@
 		F09A089424954E6E00078271 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F09A089224954E6E00078271 /* Main.storyboard */; };
 		F09A089624954E6F00078271 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F09A089524954E6F00078271 /* Assets.xcassets */; };
 		F09A089924954E6F00078271 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F09A089724954E6F00078271 /* LaunchScreen.storyboard */; };
+		F09A08A124954E7A00078271 /* favouriteUsers.json in Resources */ = {isa = PBXBuildFile; fileRef = F09A08A024954E7A00078271 /* favouriteUsers.json */; };
+		F09A08A324954E7F00078271 /* contactUsers.json in Resources */ = {isa = PBXBuildFile; fileRef = F09A08A224954E7F00078271 /* contactUsers.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		F09A089524954E6F00078271 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F09A089824954E6F00078271 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F09A089A24954E6F00078271 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F09A08A024954E7A00078271 /* favouriteUsers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = favouriteUsers.json; sourceTree = "<group>"; };
+		F09A08A224954E7F00078271 /* contactUsers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = contactUsers.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,8 @@
 				F09A088C24954E6E00078271 /* AppDelegate.swift */,
 				F09A088E24954E6E00078271 /* SceneDelegate.swift */,
 				F09A089024954E6E00078271 /* ViewController.swift */,
+				F09A08A024954E7A00078271 /* favouriteUsers.json */,
+				F09A08A224954E7F00078271 /* contactUsers.json */,
 				F09A089224954E6E00078271 /* Main.storyboard */,
 				F09A089524954E6F00078271 /* Assets.xcassets */,
 				F09A089724954E6F00078271 /* LaunchScreen.storyboard */,
@@ -127,6 +133,8 @@
 			files = (
 				F09A089924954E6F00078271 /* LaunchScreen.storyboard in Resources */,
 				F09A089624954E6F00078271 /* Assets.xcassets in Resources */,
+				F09A08A324954E7F00078271 /* contactUsers.json in Resources */,
+				F09A08A124954E7A00078271 /* favouriteUsers.json in Resources */,
 				F09A089424954E6E00078271 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
