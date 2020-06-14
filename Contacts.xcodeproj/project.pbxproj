@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F04C37F324962805009214B2 /* UIView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04C37F224962805009214B2 /* UIView + Extension.swift */; };
 		F09A088D24954E6E00078271 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09A088C24954E6E00078271 /* AppDelegate.swift */; };
 		F09A088F24954E6E00078271 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09A088E24954E6E00078271 /* SceneDelegate.swift */; };
 		F09A089124954E6E00078271 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09A089024954E6E00078271 /* ContactsViewController.swift */; };
@@ -23,9 +24,11 @@
 		F09A08B62495579600078271 /* FavouriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09A08B52495579600078271 /* FavouriteCell.swift */; };
 		F09A08B8249557A000078271 /* ContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09A08B7249557A000078271 /* ContactCell.swift */; };
 		F09A08BA24955B7700078271 /* UIViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09A08B924955B7700078271 /* UIViewController + Extension.swift */; };
+		F0A2B3D12496250A00A7D62B /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A2B3D02496250A00A7D62B /* SectionHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F04C37F224962805009214B2 /* UIView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Extension.swift"; sourceTree = "<group>"; };
 		F09A088924954E6E00078271 /* Contacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Contacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F09A088C24954E6E00078271 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F09A088E24954E6E00078271 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -44,6 +47,7 @@
 		F09A08B52495579600078271 /* FavouriteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteCell.swift; sourceTree = "<group>"; };
 		F09A08B7249557A000078271 /* ContactCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCell.swift; sourceTree = "<group>"; };
 		F09A08B924955B7700078271 /* UIViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extension.swift"; sourceTree = "<group>"; };
+		F0A2B3D02496250A00A7D62B /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +99,7 @@
 		F09A08B02495574D00078271 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				F0A2B3D02496250A00A7D62B /* SectionHeader.swift */,
 				F09A08AA2495565900078271 /* ProfileCell.swift */,
 				F09A08B52495579600078271 /* FavouriteCell.swift */,
 				F09A08B7249557A000078271 /* ContactCell.swift */,
@@ -123,6 +128,7 @@
 			children = (
 				F09A08A424954F4200078271 /* MainTabBarController.swift */,
 				F09A089024954E6E00078271 /* ContactsViewController.swift */,
+				F04C37F224962805009214B2 /* UIView + Extension.swift */,
 				F09A08A62495501D00078271 /* RecentViewController.swift */,
 			);
 			path = Controllers;
@@ -213,6 +219,7 @@
 				F09A08A72495501D00078271 /* RecentViewController.swift in Sources */,
 				F09A08AD2495572400078271 /* UserModel.swift in Sources */,
 				F09A088D24954E6E00078271 /* AppDelegate.swift in Sources */,
+				F04C37F324962805009214B2 /* UIView + Extension.swift in Sources */,
 				F09A08A92495550C00078271 /* Bundle + Extension.swift in Sources */,
 				F09A08B62495579600078271 /* FavouriteCell.swift in Sources */,
 				F09A08B8249557A000078271 /* ContactCell.swift in Sources */,
@@ -221,6 +228,7 @@
 				F09A08AB2495565900078271 /* ProfileCell.swift in Sources */,
 				F09A08BA24955B7700078271 /* UIViewController + Extension.swift in Sources */,
 				F09A08AF2495573600078271 /* SelfConfiguringCell.swift in Sources */,
+				F0A2B3D12496250A00A7D62B /* SectionHeader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

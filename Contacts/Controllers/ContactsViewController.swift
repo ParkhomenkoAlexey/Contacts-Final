@@ -52,6 +52,8 @@ class ContactsViewController: UIViewController {
         collectionView.backgroundColor = .white
         view.addSubview(collectionView)
         
+        collectionView.register(SectionHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: SectionHeader.reuseId)
+        
         collectionView.register(ProfileCell.self, forCellWithReuseIdentifier: ProfileCell.reuseId)
         collectionView.register(FavouriteCell.self, forCellWithReuseIdentifier: FavouriteCell.reuseId)
         collectionView.register(ContactCell.self, forCellWithReuseIdentifier: ContactCell.reuseId)
@@ -118,7 +120,12 @@ class ContactsViewController: UIViewController {
         
         let section = NSCollectionLayoutSection(group: group)
         section.interGroupSpacing = 1
-        section.contentInsets = NSDirectionalEdgeInsets.init(top: 0, leading: 16, bottom: 0, trailing: 16)
+        section.contentInsets = NSDirectionalEdgeInsets.init(top: 16, leading: 16, bottom: 0, trailing: 16)
+        
+        
+        let sectionHeaderSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(25))
+        let sectionHeader = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: sectionHeaderSize, elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)
+        section.boundarySupplementaryItems = [sectionHeader]
         return section
     }
     
@@ -137,9 +144,22 @@ class ContactsViewController: UIViewController {
     // MARK: - DataSource
     func createDataSource() {
         dataSource = UICollectionViewDiffableDataSource<ContactsModel.UserCollection, ContactsModel.User>(collectionView: collectionView, cellProvider: { (collectionView, indexPath, user) -> UICollectionViewCell? in
-            
+            var user = user
             
             let type = self.currentSnapshot.sectionIdentifiers[indexPath.section].type
+            let users = self.currentSnapshot.sectionIdentifiers[indexPath.section].users
+            
+            if type == .contacts {
+                if users.count > 1, users.first == user {
+                    user.direction = .top
+                } else if users.count == 1 {
+                    user.direction = .all
+                } else if users.last == user {
+                    user.direction = .bottom
+                } else {
+                    user.direction = .nope
+                }
+            }
             
             switch type {
             case .profile:
@@ -150,6 +170,20 @@ class ContactsViewController: UIViewController {
                 return self.configure(collectionView: collectionView, cellType: ContactCell.self, with: user, for: indexPath)
             }
         })
+        
+        dataSource.supplementaryViewProvider = { [weak self] (collectionView: UICollectionView, kind: String, indexPath: IndexPath) -> UICollectionReusableView? in
+            guard let self = self, let snapshot = self.currentSnapshot else { return nil }
+            
+            if let sectionHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: SectionHeader.reuseId, for: indexPath) as? SectionHeader {
+                let collection = snapshot.sectionIdentifiers[indexPath.section]
+                sectionHeader.titleLabel.text = collection.header
+                return sectionHeader
+            } else {
+                fatalError("Cannot create new supplementary")
+            }
+            
+            
+        }
     }
 }
 
