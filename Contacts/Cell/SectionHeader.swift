@@ -19,6 +19,9 @@ class SectionHeader: UICollectionReusableView {
         
         backgroundColor = .systemGroupedBackground
         
+        titleLabel.font = UIFont.sfProRounded(ofSize: 18, weight: .semibold)
+        titleLabel.textColor = #colorLiteral(red: 0.5294117647, green: 0.5450980392, blue: 0.5843137255, alpha: 1)
+        
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         addSubview(titleLabel)
         
