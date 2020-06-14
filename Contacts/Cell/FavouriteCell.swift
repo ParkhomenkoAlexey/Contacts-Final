@@ -18,7 +18,7 @@ class FavouriteCell: UICollectionViewCell, SelfConfiguringCell {
         backgroundColor = .blue
     }
     
-    func configure(with user: User) {
+    func configure(with user: ContactsModel.User) {
         
     }
     

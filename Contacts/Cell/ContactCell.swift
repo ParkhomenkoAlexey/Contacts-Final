@@ -15,10 +15,10 @@ class ContactCell: UICollectionViewCell, SelfConfiguringCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        backgroundColor = .yellow
+        backgroundColor = .red
     }
     
-    func configure(with user: User) {
+    func configure(with user: ContactsModel.User) {
         
     }
     
