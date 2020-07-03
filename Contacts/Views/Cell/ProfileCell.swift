@@ -47,7 +47,7 @@ class ProfileCell: UICollectionViewCell, SelfConfiguringCell {
         NSLayoutConstraint.activate([
             nameLabel.leadingAnchor.constraint(equalTo: imageView.trailingAnchor, constant: 16),
             nameLabel.topAnchor.constraint(equalTo: topAnchor),
-            nameLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16)
+            nameLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -6)
         ])
         
         NSLayoutConstraint.activate([
