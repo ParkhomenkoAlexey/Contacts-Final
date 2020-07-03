@@ -10,8 +10,6 @@ import UIKit
 
 class ContactsViewController: UIViewController {
     
-    
-    
     let addBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addBarButtonItemTapped))
     let groupsBarButtonItem = UIBarButtonItem(title: "Groups", style: .plain, target: self, action: #selector(groupsBarButtonItemTapped))
     
@@ -24,17 +22,25 @@ class ContactsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        for family in UIFont.familyNames.sorted() {
-            let names = UIFont.fontNames(forFamilyName: family)
-            print("Family: \(family) Font names: \(names)")
-        }
-        
         setupNavigationBar()
         setupCollectionView()
         createDataSource()
         reloadData()
     }
     
+    private func reloadData() {
+        currentSnapshot = NSDiffableDataSourceSnapshot<ContactsModel.UserCollection, ContactsModel.User>()
+        
+        contactsModel.collections.forEach { (collection) in
+            currentSnapshot.appendSections([collection])
+            currentSnapshot.appendItems(collection.users)
+        }
+        
+        
+        dataSource.apply(currentSnapshot, animatingDifferences: true)
+    }
+    
+    // MARK: - Setup View
     private func setupNavigationBar() {
         let searchController = UISearchController()
         navigationItem.searchController = searchController
@@ -64,6 +70,7 @@ class ContactsViewController: UIViewController {
         
     }
     
+    // MARK: - Layout
     private func createCompositionalLayout() -> UICollectionViewCompositionalLayout {
         let layout = UICollectionViewCompositionalLayout { (sectionIndex, layoutEnvirment) -> NSCollectionLayoutSection? in
             
@@ -133,18 +140,6 @@ class ContactsViewController: UIViewController {
         return section
     }
     
-    private func reloadData() {
-        currentSnapshot = NSDiffableDataSourceSnapshot<ContactsModel.UserCollection, ContactsModel.User>()
-        
-        contactsModel.collections.forEach { (collection) in
-            currentSnapshot.appendSections([collection])
-            currentSnapshot.appendItems(collection.users)
-        }
-        
-        
-        dataSource.apply(currentSnapshot, animatingDifferences: true)
-    }
-    
     // MARK: - DataSource
     func createDataSource() {
         dataSource = UICollectionViewDiffableDataSource<ContactsModel.UserCollection, ContactsModel.User>(collectionView: collectionView, cellProvider: { (collectionView, indexPath, user) -> UICollectionViewCell? in
@@ -185,8 +180,6 @@ class ContactsViewController: UIViewController {
             } else {
                 fatalError("Cannot create new supplementary")
             }
-            
-            
         }
     }
 }

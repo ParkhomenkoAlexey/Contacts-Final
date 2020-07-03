@@ -27,5 +27,4 @@ extension UIFont {
             return UIFont.init(name: "SFProRounded-Semibold", size: size)
         }
     }
-    
 }

@@ -15,6 +15,4 @@ class RecentViewController: UIViewController {
 
         view.backgroundColor = .red
     }
-
-
 }

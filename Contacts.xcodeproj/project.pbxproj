@@ -69,6 +69,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F026646F24AF72A4003DC084 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F026647024AF72AF003DC084 /* Suplementary */,
+				F09A08B02495574D00078271 /* Cell */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F026647024AF72AF003DC084 /* Suplementary */ = {
+			isa = PBXGroup;
+			children = (
+				F0A2B3D02496250A00A7D62B /* SectionHeader.swift */,
+			);
+			path = Suplementary;
+			sourceTree = "<group>";
+		};
 		F09A088024954E6E00078271 = {
 			isa = PBXGroup;
 			children = (
@@ -92,7 +109,7 @@
 				F09A088E24954E6E00078271 /* SceneDelegate.swift */,
 				F09A08B12495575500078271 /* Models */,
 				F09A08B32495576500078271 /* Controllers */,
-				F09A08B02495574D00078271 /* Cell */,
+				F026646F24AF72A4003DC084 /* Views */,
 				F09A08B22495575A00078271 /* Protocols */,
 				F09A08B42495577300078271 /* Extensions */,
 				F09A08A024954E7A00078271 /* favouriteUsers.json */,
@@ -110,7 +127,6 @@
 		F09A08B02495574D00078271 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				F0A2B3D02496250A00A7D62B /* SectionHeader.swift */,
 				F09A08AA2495565900078271 /* ProfileCell.swift */,
 				F09A08B52495579600078271 /* FavouriteCell.swift */,
 				F09A08B7249557A000078271 /* ContactCell.swift */,
@@ -139,7 +155,6 @@
 			children = (
 				F09A08A424954F4200078271 /* MainTabBarController.swift */,
 				F09A089024954E6E00078271 /* ContactsViewController.swift */,
-				F04C37F224962805009214B2 /* UIView + Extension.swift */,
 				F09A08A62495501D00078271 /* RecentViewController.swift */,
 			);
 			path = Controllers;
@@ -148,6 +163,7 @@
 		F09A08B42495577300078271 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				F04C37F224962805009214B2 /* UIView + Extension.swift */,
 				F09A08A82495550C00078271 /* Bundle + Extension.swift */,
 				F09A08B924955B7700078271 /* UIViewController + Extension.swift */,
 				F04C37FA249635E8009214B2 /* UIFont + Extension.swift */,
